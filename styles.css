@@ -68,6 +68,7 @@ p {
     font-size: 13px;
     margin-bottom: 10px;
 }
+
 .container ul li::before {
     content: "";
     display: inline-block;
@@ -89,6 +90,18 @@ p {
     font-size: 14px;
 }
 
+.container form .email-container .line {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container form .email-container .line span {
+    color: var(--primary-color);
+    font-size: 12px;
+    display: none;
+}
+
 .container form input {
     display: block;
     width: 100%;
@@ -104,17 +117,14 @@ p {
     border-radius: 6px;
     margin: 10px 0 25px;
 }
+
 .container form input[type="email"]:focus {
     outline: none;
     color: var(--dark-slate-grey);
     border: 1px solid var(--dark-slate-grey);
     cursor: pointer;
 }
-.container form input[type="email"]:invalid{
-    background-color: hsla(4, 100%, 67%, 0.4);
-    color: var(--primary-color);
-    border-color: var(--primary-color);
-}
+
 .container .image img {
     max-width: 100%;
 }
@@ -132,7 +142,8 @@ p {
     background-color: white;
     color: var(--dark-slate-grey);
 }
-.success-message h2  {
+
+.success-message h2 {
     margin-top: 30px;
 }
 
@@ -153,9 +164,17 @@ p {
     border-radius: 6px;
     transition: .4s;
 }
+
 .main-btn:hover {
     background: linear-gradient(270deg, var(--primary-color), var(--light-primary-color));
     box-shadow: 12px 12px 30px hsla(4, 100%, 67%, 0.6);
     cursor: pointer;
 }
+
+.invalid-email {
+    background-color: hsla(4, 100%, 67%, 0.1);
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color) !important;
+}
+
 /* end components  */
